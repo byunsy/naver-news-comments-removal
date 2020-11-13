@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Naver News Comments Out",
+    "short_name": "Commout",
+    "description": "This extension will remove all the comment sections in Naver News",
+    "version": "1.0.0",
+  
+    "permissions": [
+        "activeTab", 
+        "storage",
+        "*://news.naver.com/*"
+    ],
+
+    "content_scripts": [
+        {
+          "matches": ["*://news.naver.com/*"],
+          "js": ["commout.js"]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    }
+}
